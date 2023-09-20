@@ -15,7 +15,7 @@ type RedisRepo struct {
 }
 
 func orderIDKey(id uint64) string {
-	return fmt.Sprint("📦 orderL %d", id)
+	return fmt.Sprintf("order:%d", id)
 }
 
 func (r *RedisRepo) Insert(ctx context.Context, order model.Order) error {
